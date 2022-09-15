@@ -24,7 +24,8 @@ public class CalcRendimento {
         System.out.println("Insira valor desejado para simulação: ");
         render2.setInvestInicial(inVal.nextFloat());
         
-        render2.setTaxaRendimento(2f);
+        System.out.println("Insira o valor da taxa de rendimento: ");
+        render2.setTaxaRendimento(inVal.nextFloat());
         
         System.out.println("Daqui quantos meses você desja retirar o valor investido? ");
         render2.setNumMes(inVal.nextInt());
