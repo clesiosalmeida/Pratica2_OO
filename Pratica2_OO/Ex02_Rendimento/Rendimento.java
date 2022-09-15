@@ -58,7 +58,7 @@ public class Rendimento {
             this.investInicial = ((this.investInicial)*(1+(this.taxaRendimento/100)));
 
             //System.out.printf("mês %d:    %.2f %n",(i+1),getInvestInicial()); //printf
-            System.out.println("Mês "+(i+1)+":  "+NumberFormat.getCurrencyInstance().format(getInvestInicial()));
+            System.out.println("Mês "+(i+1)+":  "+NumberFormat.getCurrencyInstance().format(getInvestInicial()));//Utilizando NumberForma
         }
     } 
     
