@@ -1,5 +1,7 @@
 package Ex02_Rendimento;
 
+import java.text.NumberFormat;
+
 public class Rendimento {
     private float investInicial;
     private float taxaRendimento;
@@ -50,12 +52,13 @@ public class Rendimento {
             //2.2retorna o valor de cada mês rendido;
            
     public void rendMes (){
-        System.out.println("Investimento Inicial    |   "+getInvestInicial()+"\nPercentual de rendimento/mês    |   "+getTaxaRendimento());
+        System.out.println("Investimento Inicial    |   "+NumberFormat.getCurrencyInstance().format(getInvestInicial())+"\nPercentual de rendimento/mês    |   "+ NumberFormat.getPercentInstance().format((getTaxaRendimento()/100)));
 
         for(int i=0;i<=getNumMes();i++){
             this.investInicial = ((this.investInicial)*(1+(this.taxaRendimento/100)));
 
-            System.out.printf("mês %d:    %.2f %n",(i+1),getInvestInicial());
+            //System.out.printf("mês %d:    %.2f %n",(i+1),getInvestInicial()); //printf
+            System.out.println("Mês "+(i+1)+":  "+NumberFormat.getCurrencyInstance().format(getInvestInicial()));
         }
     } 
     

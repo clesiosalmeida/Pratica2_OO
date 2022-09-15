@@ -1,5 +1,8 @@
 package Ex02_Rendimento;
+
 import java.util.Scanner;
+import java.text.NumberFormat;//pacote java.text para usar na formatação de números  
+
 //Classe para cacular o rendimento do investimento
 
 public class CalcRendimento {
